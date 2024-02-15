@@ -21,7 +21,20 @@ from app.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lisst/',lisst,name='lisst'),
-    path('StudentDetails/',StudentDetails.as_view(),name='StudentDetails')
+
+    path('users/<pk>/',users,name='users'),
+    path('ids/<value>/',ids,name='ids'),
+    
+    path('StudentDetails/',StudentDetails.as_view(),name='StudentDetails'),
+
+    path('succcess/',succcess,name='succcess'),
+    #this thing
+
+
+    path('UserDetails/<pk>/',UserDetails.as_view(),name='UserDetails'),
+    path('user_delete/<pk>/',user_delete.as_view(),name='user_delete'),
+
+
 
     
 
